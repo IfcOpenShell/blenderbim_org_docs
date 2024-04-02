@@ -1,0 +1,626 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Hello, world!" href="hello_world.html" /><link rel="prev" title="IFC Project" href="../users/general_usage/ifc_project.html" />
+
+    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
+        <title>Installation - BlenderBIM Add-on 0.0.231104 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=aefb6c79" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=f39ed457" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #282C34;
+  --color-code-foreground: #ABB2BF;
+  --color-brand-primary: #39b54a;
+  --color-brand-content: #39b54a;
+  --color-brand-visited: #d9e021;
+  --color-background-primary: #f7f7f6;
+  --color-background-secondary: #eeeeec;
+  --color-background-border: #cfd0cb;
+  --color-foreground-primary: #2e3436;
+  --color-sidebar-item-background--hover: #f7f7f6;
+  --color-link--hover: #d98014;
+  --font-stack: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #282C34;
+  --color-code-foreground: #ABB2BF;
+  --color-brand-primary: #39b54a;
+  --color-brand-content: #39b54a;
+  --color-brand-visited: #d9e021;
+  --color-background-primary: #2e3436;
+  --color-background-border: #2e3436;
+  --color-foreground-primary: #eeeeec;
+  --color-sidebar-item-background--hover: #2e3436;
+  --color-link--hover: #d98014;
+  --font-stack: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #282C34;
+  --color-code-foreground: #ABB2BF;
+  --color-brand-primary: #39b54a;
+  --color-brand-content: #39b54a;
+  --color-brand-visited: #d9e021;
+  --color-background-primary: #2e3436;
+  --color-background-border: #2e3436;
+  --color-foreground-primary: #eeeeec;
+  --color-sidebar-item-background--hover: #2e3436;
+  --color-link--hover: #d98014;
+  --font-stack: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">BlenderBIM Add-on 0.0.231104 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="https://blenderbim.org/assets/images/blender/blender-logo.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">BlenderBIM Add-on 0.0.231104 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">For users:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../users/introduction_to_bim.html">Introduction to BIM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/exploring_an_ifc_model.html">Exploring an IFC model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/creating_an_ifc_model.html">Creating an IFC model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/georeferencing.html">Georeferencing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/dealing_with_large_models.html">Dealing with large models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/git_support.html">Tracking revisions with Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/other_addons.html">Other add-ons</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../users/general_usage.html">General usage</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of General usage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../users/general_usage/interface.html">User Interface</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of User Interface</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../users/general_usage/interface/workspace.html">Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../users/general_usage/interface/property-editor.html">Property Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../users/general_usage/ifc_project.html">IFC Project</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For developers:</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hello_world.html">Hello, world!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_style.html">Code style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_tests.html">Running tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_docs.html">Writing docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translations.html">Translations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="undo_system.html">Undo system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system_support.html">System support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ux_guidelines.html">User Experience and User Interface guidelines</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="edit-this-page">
+  <a class="muted-link" href="https://github.com/IfcOpenShell/IfcOpenShell/edit/v0.7.0/src/blenderbim/docs/devs/installation.rst" title="Edit this page">
+    <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+      <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+    </svg>
+    <span class="visually-hidden">Edit this page</span>
+  </a>
+</div><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h1>
+<p>There are different methods of installation, depending on your situation.</p>
+<ol class="arabic simple">
+<li><p><strong>Unstable installation</strong> is recommended for power users helping with testing.</p></li>
+<li><p><strong>Bundling for Blender</strong> is recommended for distributing the add-on.</p></li>
+<li><p><strong>Live development environment</strong> is recommended for developers who are actively coding.</p></li>
+<li><p><strong>Packaged installation</strong> is recommended for those who use a package manager.</p></li>
+</ol>
+<section id="unstable-installation">
+<h2>Unstable installation<a class="headerlink" href="#unstable-installation" title="Link to this heading">#</a></h2>
+<p><strong>Unstable installation</strong> is almost the same as <strong>Stable installation</strong>, except
+that they are typically updated every day. Simply download a daily build from
+the <a class="reference external" href="https://github.com/IfcOpenShell/IfcOpenShell/releases">Github releases page</a>, then follow the same
+instructions as the <strong>Stable installation</strong>.</p>
+<p>You will need to choose which build to download.</p>
+<ul class="simple">
+<li><p>If you are on Blender &gt;=4.1, choose py311</p></li>
+<li><p>If you are on Blender &gt;=3.1 and &lt;=4.0, choose py10</p></li>
+<li><p>If you are on Blender &gt;=2.93 and &lt;3.1, choose py39</p></li>
+<li><p>Choose <code class="docutils literal notranslate"><span class="pre">linux</span></code>, <code class="docutils literal notranslate"><span class="pre">macos</span></code> (Apple Intel), <code class="docutils literal notranslate"><span class="pre">macosm1</span></code> (Apple Silicon), or
+<code class="docutils literal notranslate"><span class="pre">win</span></code> depending on your operating system</p></li>
+</ul>
+<p>Sometimes, a build may be delayed, or contain broken code. We try to avoid this,
+but it happens.</p>
+</section>
+<section id="bundling-for-blender">
+<h2>Bundling for Blender<a class="headerlink" href="#bundling-for-blender" title="Link to this heading">#</a></h2>
+<p>Instead of waiting for an official release on the BlenderBIM Add-on website, it
+is possible to make your own Blender add-on from the bleeding edge source code
+of BlenderBIM. BlenderBIM is coded in Python and doesn’t require any
+compilation, so this is a relatively easy process.</p>
+<p>Note that the BlenderBIM Add-on does depend on IfcOpenShell, and IfcOpenShell
+does require compilation. The following instructions will use a pre-built
+IfcOpenShell (using an IfcOpenBot build) for convenience. Instructions on how to
+compile IfcOpenShell is out of scope of this document.</p>
+<p>You can create your own package by using the Makefile as shown below. You can
+choose between a <code class="docutils literal notranslate"><span class="pre">PLATFORM</span></code> of <code class="docutils literal notranslate"><span class="pre">linux</span></code>, <code class="docutils literal notranslate"><span class="pre">macos</span></code>, <code class="docutils literal notranslate"><span class="pre">macosm1</span></code>, and <code class="docutils literal notranslate"><span class="pre">win</span></code>.
+You can choose between a <code class="docutils literal notranslate"><span class="pre">PYVERSION</span></code> of <code class="docutils literal notranslate"><span class="pre">py311</span></code>, <code class="docutils literal notranslate"><span class="pre">py310</span></code>, or <code class="docutils literal notranslate"><span class="pre">py39</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd src/blenderbim
+$ make dist PLATFORM=linux PYVERSION=py311
+$ ls dist/
+</pre></div>
+</div>
+<p>This will give you a fully packaged Blender add-on zip that you can distribute
+and install.</p>
+</section>
+<section id="live-development-environment">
+<h2>Live development environment<a class="headerlink" href="#live-development-environment" title="Link to this heading">#</a></h2>
+<p>One option for developers who want to actively develop from source is to follow
+the instructions from <strong>Bundling for Blender</strong>. However, creating a build,
+uninstalling the old add-on, and installing a new build is a slow process.
+Although it works, it is very slow, so we do not recommend it.</p>
+<p>A more rapid approach is to follow the <strong>Unstable installation</strong> method, as this
+provides all dependencies for you out of the box.</p>
+<p>Once you’ve done this, you can replace certain Python files that tend to be
+updated frequently with those from the Git repository. We’re going to use
+symlinks (Windows users can use <code class="docutils literal notranslate"><span class="pre">mklink</span></code>), so we can code in our Git
+repository, and see the changes in our Blender installation (you will need to
+restart Blender to see changes).</p>
+<p>For Linux or Mac:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/IfcOpenShell/IfcOpenShell.git
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>IfcOpenShell
+
+<span class="gp"># </span>path<span class="w"> </span>to<span class="w"> </span>BlenderBIM<span class="w"> </span>addon
+<span class="gp"># </span>default<span class="w"> </span>path<span class="w"> </span>on<span class="w"> </span>Mac:<span class="w"> </span><span class="s2">&quot;/Users/</span><span class="nv">$USER</span><span class="s2">/Library/Application Support/Blender/X.X/scripts/addons/blenderbim&quot;</span>
+<span class="gp"># </span>default<span class="w"> </span>path<span class="w"> </span>on<span class="w"> </span>Linux:<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.config/blender/X.X/&quot;</span>
+<span class="gp">$ </span><span class="nv">BLENDER_ADDON_PATH</span><span class="o">=</span><span class="s2">&quot;/path/to/blender/X.XX/scripts/addons/blenderbim&quot;</span>
+
+<span class="gp"># </span>Remove<span class="w"> </span>the<span class="w"> </span>Blender<span class="w"> </span>add-on<span class="w"> </span>Python<span class="w"> </span>code
+<span class="gp">$ </span>rm<span class="w"> </span>-r<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/core/
+<span class="gp">$ </span>rm<span class="w"> </span>-r<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/tool/
+<span class="gp">$ </span>rm<span class="w"> </span>-r<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/bim/
+
+<span class="gp"># </span>Replace<span class="w"> </span>them<span class="w"> </span>with<span class="w"> </span>links<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>Git<span class="w"> </span>repository
+<span class="gp">$ </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$PWD</span>/src/blenderbim/blenderbim/core<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/core
+<span class="gp">$ </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$PWD</span>/src/blenderbim/blenderbim/tool<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/tool
+<span class="gp">$ </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$PWD</span>/src/blenderbim/blenderbim/bim<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/bim
+
+<span class="gp"># </span>Remove<span class="w"> </span>the<span class="w"> </span>IfcOpenShell<span class="w"> </span>dependency<span class="w"> </span>Python<span class="w"> </span>code
+<span class="gp">$ </span>rm<span class="w"> </span>-r<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifcopenshell/api
+<span class="gp">$ </span>rm<span class="w"> </span>-r<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifcopenshell/util
+
+<span class="gp"># </span>Replace<span class="w"> </span>them<span class="w"> </span>with<span class="w"> </span>links<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>Git<span class="w"> </span>repository
+<span class="gp">$ </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$PWD</span>/src/ifcopenshell-python/ifcopenshell/api<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifcopenshell/api
+<span class="gp">$ </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$PWD</span>/src/ifcopenshell-python/ifcopenshell/util<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifcopenshell/util
+
+<span class="gp"># </span>Remove<span class="w"> </span>and<span class="w"> </span>link<span class="w"> </span>other<span class="w"> </span>IfcOpenShell<span class="w"> </span>utilities
+<span class="gp">$ </span>rm<span class="w"> </span>-r<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifccsv.py
+<span class="gp">$ </span>rm<span class="w"> </span>-r<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifcdiff.py
+<span class="gp">$ </span>rm<span class="w"> </span>-r<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifc4d
+<span class="gp">$ </span>rm<span class="w"> </span>-r<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifc5d
+<span class="gp">$ </span>rm<span class="w"> </span>-r<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifccityjson
+<span class="gp">$ </span>rm<span class="w"> </span>-r<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifcclash
+<span class="gp">$ </span>rm<span class="w"> </span>-r<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifcpatch
+<span class="gp">$ </span>rm<span class="w"> </span>-r<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifctester
+<span class="gp">$ </span>rm<span class="w"> </span>-r<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifcfm
+
+<span class="gp">$ </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$PWD</span>/src/ifccsv/ifccsv.py<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifccsv.py
+<span class="gp">$ </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$PWD</span>/src/ifcdiff/ifcdiff.py<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifcdiff.py
+<span class="gp">$ </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$PWD</span>/src/ifc4d/ifc4d<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifc4d
+<span class="gp">$ </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$PWD</span>/src/ifc5d/ifc5d<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifc5d
+<span class="gp">$ </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$PWD</span>/src/ifccityjson/ifccityjson<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifccityjson
+<span class="gp">$ </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$PWD</span>/src/ifcclash/ifcclash<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifcclash
+<span class="gp">$ </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$PWD</span>/src/ifcpatch/ifcpatch<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifcpatch
+<span class="gp">$ </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$PWD</span>/src/ifctester/ifctester<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifctester
+<span class="gp">$ </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$PWD</span>/src/ifcfm/ifcfm<span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/libs/site/packages/ifcfm
+
+<span class="gp"># </span>Manually<span class="w"> </span>download<span class="w"> </span>some<span class="w"> </span>third<span class="w"> </span>party<span class="w"> </span>dependencies
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/bim/data/gantt
+<span class="gp">$ </span>wget<span class="w"> </span>https://raw.githubusercontent.com/jsGanttImproved/jsgantt-improved/master/dist/jsgantt.js
+<span class="gp">$ </span>wget<span class="w"> </span>https://raw.githubusercontent.com/jsGanttImproved/jsgantt-improved/master/dist/jsgantt.css
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$BLENDER_ADDON_PATH</span>/bim/schema
+<span class="gp">$ </span>wget<span class="w"> </span>https://github.com/BrickSchema/Brick/releases/download/nightly/Brick.ttl
+</pre></div>
+</div>
+<p>Or, if you’re on Windows, you can use the batch script below.
+Before running it follow the instructions descibed after <cite>rem</cite> tags.</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">echo</span> off
+
+<span class="c1">rem SETUP BLENDER-BIM LIVE DEVELOPMENT ENVIRONMENT</span>
+<span class="c1">rem Setup blenderbim addon location below (probably just need to change &quot;x.x&quot; for your Blender version).</span>
+<span class="c1">rem Put the script to the folder where IfcOpenShell git repository is located</span>
+<span class="c1">rem (script will try to clone IfcOpenShell.git if it&#39;s not present).</span>
+<span class="k">SET</span> <span class="nv">blenderbim</span><span class="p">=</span><span class="nv">%appdata%</span>\Blender Foundation\Blender\x.x\scripts\addons\blenderbim
+
+git clone https://github.com/IfcOpenShell/IfcOpenShell.git
+<span class="k">cd</span> IfcOpenShell
+
+<span class="k">echo</span> Removing the Blender add-on Python code...
+<span class="k">rd</span> /S /Q <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\core\&quot;</span>
+<span class="k">rd</span> /S /Q <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\tool\&quot;</span>
+<span class="k">rd</span> /S /Q <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\bim\&quot;</span>
+
+
+<span class="k">echo</span> Replacing them with links to the Git repository...
+<span class="k">mklink</span> /D <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\core&quot;</span> <span class="s2">&quot;</span><span class="nv">%cd%</span><span class="s2">\src\blenderbim\blenderbim\core&quot;</span>
+<span class="k">mklink</span> /D <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\tool&quot;</span> <span class="s2">&quot;</span><span class="nv">%cd%</span><span class="s2">\src\blenderbim\blenderbim\tool&quot;</span>
+<span class="k">mklink</span> /D <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\bim&quot;</span> <span class="s2">&quot;</span><span class="nv">%cd%</span><span class="s2">\src\blenderbim\blenderbim\bim&quot;</span>
+
+
+<span class="k">echo</span> Remove the IfcOpenShell dependency Python code...
+<span class="k">rd</span> /S /Q <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifcopenshell\api&quot;</span>
+<span class="k">rd</span> /S /Q <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifcopenshell\util&quot;</span>
+
+
+<span class="k">echo</span> Replacing them with links to the Git repository...
+<span class="k">mklink</span> /D <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifcopenshell\api&quot;</span> <span class="s2">&quot;</span><span class="nv">%cd%</span><span class="s2">\src\ifcopenshell-python\ifcopenshell\api&quot;</span>
+<span class="k">mklink</span> /D <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifcopenshell\util&quot;</span> <span class="s2">&quot;</span><span class="nv">%cd%</span><span class="s2">\src\ifcopenshell-python\ifcopenshell\util&quot;</span>
+
+<span class="k">echo</span> Remove and link other IfcOpenShell utilities...
+<span class="k">del</span> <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifccsv.py&quot;</span>
+<span class="k">del</span> <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifcdiff.py&quot;</span>
+<span class="k">rd</span> /S /Q <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifc4d&quot;</span>
+<span class="k">rd</span> /S /Q <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifc5d&quot;</span>
+<span class="k">rd</span> /S /Q <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifccityjson&quot;</span>
+<span class="k">rd</span> /S /Q <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifcclash&quot;</span>
+<span class="k">rd</span> /S /Q <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifcpatch&quot;</span>
+<span class="k">rd</span> /S /Q <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifctester&quot;</span>
+<span class="k">rd</span> /S /Q <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifcfm&quot;</span>
+
+<span class="k">mklink</span> <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifccsv.py&quot;</span> <span class="s2">&quot;</span><span class="nv">%cd%</span><span class="s2">\src\ifccsv\ifccsv.py&quot;</span>
+<span class="k">mklink</span> <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifcdiff.py&quot;</span> <span class="s2">&quot;</span><span class="nv">%cd%</span><span class="s2">\src\ifcdiff\ifcdiff.py&quot;</span>
+<span class="k">mklink</span> /D <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifc4d&quot;</span> <span class="s2">&quot;</span><span class="nv">%cd%</span><span class="s2">\src\ifc4d\ifc4d&quot;</span>
+<span class="k">mklink</span> /D <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifc5d&quot;</span> <span class="s2">&quot;</span><span class="nv">%cd%</span><span class="s2">\src\ifc5d\ifc5d&quot;</span>
+<span class="k">mklink</span> /D <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifccityjson&quot;</span> <span class="s2">&quot;</span><span class="nv">%cd%</span><span class="s2">\src\ifccityjson\ifccityjson&quot;</span>
+<span class="k">mklink</span> /D <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifcclash&quot;</span> <span class="s2">&quot;</span><span class="nv">%cd%</span><span class="s2">\src\ifcclash\ifcclash&quot;</span>
+<span class="k">mklink</span> /D <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifcpatch&quot;</span> <span class="s2">&quot;</span><span class="nv">%cd%</span><span class="s2">\src\ifcpatch\ifcpatch&quot;</span>
+<span class="k">mklink</span> /D <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifctester&quot;</span> <span class="s2">&quot;</span><span class="nv">%cd%</span><span class="s2">\src\ifctester\ifctester&quot;</span>
+<span class="k">mklink</span> /D <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\libs\site\packages\ifcfm&quot;</span> <span class="s2">&quot;</span><span class="nv">%cd%</span><span class="s2">\src\ifcfm\ifcfm&quot;</span>
+
+<span class="k">echo</span> Manually downloading some third party dependencies...
+curl https://raw.githubusercontent.com/jsGanttImproved/jsgantt-improved/master/dist/jsgantt.js -o <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\bim\data\gantt\jsgantt.js&quot;</span>
+curl https://raw.githubusercontent.com/jsGanttImproved/jsgantt-improved/master/dist/jsgantt.css -o <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\bim\data\gantt\jsgantt.css&quot;</span>
+curl -L https://github.com/BrickSchema/Brick/releases/download/nightly/Brick.ttl -o <span class="s2">&quot;</span><span class="nv">%blenderbim%</span><span class="s2">\bim\schema\Brick.ttl&quot;</span>
+
+<span class="k">pause</span>
+</pre></div>
+</div>
+<p>After you modify your code in the Git repository, you will need to restart
+Blender for the changes to take effect.</p>
+<p>The downside with this approach is that if a new dependency is added, or a
+compiled dependency version requirement has changed, or the build system
+changes, you’ll need to fix your setup manually. But this is relatively rare.
+Reviewing the Makefile history, <a class="reference external" href="https://github.com/IfcOpenShell/IfcOpenShell/commits/v0.7.0/src/blenderbim/Makefile">here</a>, is one quick way to see if a dependency has changed.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>There is a <a class="reference external" href="https://blenderartists.org/uploads/short-url/yto1sjw7pqDRVNQzpVLmn51PEDN.zip">useful Blender Addon</a>
+(see <a class="reference external" href="https://blenderartists.org/t/reboot-blender-addon/640465/13">forum thread</a>) that adds
+a Reboot button in File menu.  In this way, it’s possible to directly
+restart Blender and test the modified source code.  There is also a VS Code
+add-on called <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=JacquesLucke.blender-development">Blender Development</a>
+that has a similar functionality.</p>
+</div>
+</section>
+<section id="packaged-installation">
+<h2>Packaged installation<a class="headerlink" href="#packaged-installation" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Arch Linux</strong>: <a class="reference external" href="https://aur.archlinux.org/packages/ifcopenshell-git/">Direct from Git</a>.</p></li>
+<li><p><strong>Chocolatey on Windows</strong>: <a class="reference external" href="https://community.chocolatey.org/packages/blenderbim-nightly/">Unstable</a>.</p></li>
+</ul>
+</section>
+<section id="tips-for-package-managers">
+<h2>Tips for package managers<a class="headerlink" href="#tips-for-package-managers" title="Link to this heading">#</a></h2>
+<p>If you are interested in packaging the BlenderBIM Add-on for a packaging
+manager, read on.</p>
+<p>The BlenderBIM Add-on is fully contained in the <code class="docutils literal notranslate"><span class="pre">blenderbim/</span></code> subfolder of the
+Blender add-ons directory. This is typically distributed as a zipfile as per
+Blender add-on conventions. Within this folder, you’ll find the following file
+structure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">core</span><span class="o">/</span> <span class="p">(</span><span class="n">Blender</span> <span class="n">agnostic</span> <span class="n">core</span> <span class="n">code</span><span class="p">)</span>
+<span class="n">tool</span><span class="o">/</span> <span class="p">(</span><span class="n">Blender</span> <span class="n">specific</span> <span class="n">logic</span><span class="p">)</span>
+<span class="n">bim</span><span class="o">/</span> <span class="p">(</span><span class="n">Blender</span> <span class="n">specific</span> <span class="n">UI</span><span class="p">)</span>
+<span class="n">libs</span><span class="o">/</span> <span class="p">(</span><span class="n">dependencies</span><span class="p">)</span>
+<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>This corresponds to the structure found in the source code <a class="reference external" href="https://github.com/IfcOpenShell/IfcOpenShell/tree/v0.7.0/src/blenderbim/blenderbim">here</a>.</p>
+<p>The BlenderBIM Add-on is complex, and requires many dependencies, including
+Python modules, binaries, and static assets. When packaged for users, these
+dependencies are bundled with the add-on for convenience.</p>
+<p>If you choose to install the BlenderBIM Add-on and use your own system
+dependencies, the source of truth for how dependencies are bundled are found in
+the <a class="reference external" href="https://github.com/IfcOpenShell/IfcOpenShell/blob/v0.7.0/src/blenderbim/Makefile">Makefile</a>.</p>
+<p>Required Python modules to be stored in <code class="docutils literal notranslate"><span class="pre">libs/site/packages/</span></code> are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ifcopenshell</span>
+<span class="n">bcf</span>
+<span class="n">ifcclash</span>
+<span class="n">bimtester</span>
+<span class="n">ifccobie</span>
+<span class="n">ifccsv</span>
+<span class="n">ifcdiff</span>
+<span class="n">ifc4d</span>
+<span class="n">ifc5d</span>
+<span class="n">ifcpatch</span>
+<span class="n">ifctester</span>
+<span class="n">pystache</span>
+<span class="n">svgwrite</span>
+<span class="n">dateutil</span>
+<span class="n">isodate</span>
+<span class="n">networkx</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Andrej730</span><span class="o">/</span><span class="n">aud</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span><span class="o">-</span><span class="n">reduced</span><span class="o">-</span><span class="n">size</span><span class="o">.</span><span class="n">zip</span>
+<span class="n">deepdiff</span>
+<span class="n">jsonpickle</span>
+<span class="n">ordered_set</span>
+<span class="n">pyparsing</span>
+<span class="n">xmlschema</span>
+<span class="n">elementpath</span>
+<span class="n">six</span>
+<span class="n">lark</span><span class="o">-</span><span class="n">parser</span>
+<span class="n">behave</span>
+<span class="n">parse</span>
+<span class="n">parse_type</span>
+<span class="n">xlsxwriter</span>
+<span class="n">odfpy</span>
+<span class="n">defusedxml</span>
+<span class="n">jmespath</span>
+<span class="n">ifcjson</span>
+</pre></div>
+</div>
+<p>Notes:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ifcopenshell</span></code> almost always requires the latest version due to the fast paced nature of the add-on development.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">behave</span></code> requires <a class="reference external" href="https://github.com/IfcOpenShell/IfcOpenShell/tree/v0.7.0/src/ifcbimtester/patch">patches</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ifcjson</span></code> can be found <a class="reference external" href="https://github.com/IFCJSON-Team/IFC2JSON_python/tree/master/file_converters">here</a>.</p></li>
+</ol>
+<p>Required static assets are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bim</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">gantt</span><span class="o">/</span><span class="n">jsgantt</span><span class="o">.</span><span class="n">js</span> <span class="p">(</span><span class="kn">from</span> <span class="nn">jsgantt</span><span class="o">-</span><span class="n">improved</span><span class="p">)</span>
+<span class="n">bim</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">gantt</span><span class="o">/</span><span class="n">jsgantt</span><span class="o">.</span><span class="n">css</span> <span class="p">(</span><span class="kn">from</span> <span class="nn">jsgantt</span><span class="o">-</span><span class="n">improved</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="hello_world.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Hello, world!</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../users/general_usage/ifc_project.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">IFC Project</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2020-2024 IfcOpenShell Contributors
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://ifcopenshell.org" aria-label="IfcOpenShell">
+                <img src="https://ifcopenshell.org/assets/images/logo.png" style="width: auto;" />
+            </a>
+              <a class="muted-link " href="https://github.com/IfcOpenShell/IfcOpenShell/tree/v0.7.0/src/blenderbim/docs" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Installation</a><ul>
+<li><a class="reference internal" href="#unstable-installation">Unstable installation</a></li>
+<li><a class="reference internal" href="#bundling-for-blender">Bundling for Blender</a></li>
+<li><a class="reference internal" href="#live-development-environment">Live development environment</a></li>
+<li><a class="reference internal" href="#packaged-installation">Packaged installation</a></li>
+<li><a class="reference internal" href="#tips-for-package-managers">Tips for package managers</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=730a26d6"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    </body>
+</html>
