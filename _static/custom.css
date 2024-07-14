@@ -63,7 +63,7 @@ section img {
     background-color: var(--color-admonition-title-background);
     border-radius: 5px;
     font-style: italic;
-    color: var(--color-admonition-title);
+    color: var(--color-admonition-text);
 }
 img.icon {
     width: auto;
@@ -77,4 +77,15 @@ img.icon {
     font-style: italic;
     font-size: small;
     color: #808080;
+}
+
+
+
+/* Start section cards. */
+.toc-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+    list-style-type: none;
+    margin-bottom: 24px;
 }
